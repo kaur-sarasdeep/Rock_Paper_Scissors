@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rock Paper Scissors </title></head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/style2.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    
+    <header class="header">
+      <h1>Play Rock Paper Scissors</h1>
+    </header>
+
+    <div class="card">	
+      <center><img src="{{ url_for('video_feed') }}"></center>
+        <form method="post" action="{{ url_for('tasks') }}">
+          <input class="btn btn-primary text-center" type="submit" value="capture" name="click" />
+          
+          <div class="btn btn-primary text-center"><a href="{{ url_for('result') }}">see result</a></div>
+        </form>
+    </div>
+    
+    <!-- <center><p>player{{ player }}   bot{{ bot }}</p></center> -->
+    <!-- <video id="video" autoplay>Video Stream not available.</video> -->
+    <!-- <script async src="static/capture.js"</script></script> -->
+  </body>
+</html>

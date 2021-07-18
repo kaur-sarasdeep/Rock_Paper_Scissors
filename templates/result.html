@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rock Paper Scissors </title></head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="static/style.css" type="text/css" media="all" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="header">
+      <h1>Rock Paper Scissors Game</h1>
+    </header>
+
+	<div class="card">	
+		<h5 class="card-title">RESULTS</h5>
+		<div class="images">
+		<img src="static/r.jpeg">
+		<img src="static/p.jpeg">
+		<img src="static/s.jpeg">
+		</div>
+		<br>
+		<p class="res_class1"><b>{{res1}}:{{res2}}:{{res3}}</b></p>
+		<span class="res_class2">BOT PLAYED: 
+			{% for your_list_element in res4 %}
+			{{ your_list_element }}
+			{% endfor %}
+		</span>
+		<span class="res_class2">YOU PLAYED: 
+			{% for your_list_element in res5 %}
+			{{ your_list_element }}
+			{% endfor %}
+		</span>
+		<span class="res_class2">BOT SCORE: 
+			{% for your_list_element in res6 %}
+			{{ your_list_element }}
+			{% endfor %}
+		</span>
+		<span class="res_class2">YOUR SCORE: 
+			{% for your_list_element in res7 %}
+			{{ your_list_element }}
+			{% endfor %}
+		</span>
+		<br>
+		<div class="button text-center">
+			<a href="{{ url_for('index') }}" class="btn btn-primary text-center">Play Again</a>
+		</div>
+    	<!-- <script>
+			<p>{{res1}},{{res2}},{{res3}}</p>
+        // const jsonfile = JSON.parse({jsonfile});
+        // console.log(jsonfile);
+        // document.querySelector(".container").innerHTML = JSON.stringify(jsonfile, null, 2);
+    	</script> -->
+	</div>
+	
+  </body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors Game</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+		<h1>Rock Paper Scissors Game</h1>
+	</header>
+	<div class="container">
+	    <div class="score-container">
+		    <span class="user">YOU</span>
+		    <span id="score"></span>
+		    <span class="com">COM</span>
+	    </div>
+	    <div class="buttons">
+		    <button id="paper" class="bn" onclick="game(this.value)" value="paper"><i class="far fa-hand-paper"></i></button>
+		    <button id="rock" class="bn" onclick="game(this.value)" value="rock"><i class="far fa-hand-rock"></i></button>
+		    <button id="scissors" class="bn" onclick="game(this.value)" value="scissors"><i class="far fa-hand-scissors"></i></button>
+	   </div>
+	   <div id="challenge">
+	   	<div id="you">
+	   	    <div id="YourObject"></div>
+	   	    <div class="who">You</div>
+	   	</div>
+	   	<div id="result"><p id="who"><p></div>
+	   	<div id="com">
+	   	    <div id="ComObject"></div>
+	   	    <div class="who">Computer</div>
+	   	</div>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html> -->
